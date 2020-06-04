@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ color: #121828;
+ font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/*header*/
+header {
+  height: 65px;
+  width: 100%;
+  background-color: #ffffff;
+  position :fixed;
+  top: 0;
+  z-index: 300;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+/*トグルメニュー*/
+
+@media (min-width:768px){
+#m_b{
+display: none;
+}
+#menu{
+display: block !important;
+
+}
+.menu ul{
+  margin:0;
+  padding:0;
+}
+.menu li a {
+  display: block;
+  line-height: 65px;
+  padding: 0 25px;
+  color: #121828;
+  transition: all 0.5s;
+}
+.menu li a:hover {
+  color: #ffffff;
+  background-color: #ff533c;
+}
+
+.menu ul:after{
+content:"";
+display:block;
+clear:both;
+}
+
+.menu li{
+float:left;
+width:auto;
+}
+}
+.main_p{
+padding-top:20px;
+}
+
+@media (max-width: 670px) {
+#menu{
+   display:none;
+}
+#m_b{
+  padding: 10px;
+  border-style: none;
+  background-color:#ffffff;
+  position:absolute;
+  top:20px;
+  right:15px;
+  cursor: pointer;
+
+}
+
+#m_b:active{
+color:#ff533c;
+}
+.menu ul{
+  margin-top:64px;
+  padding:0;
+  background-color:#ffffff;
+}
+#menu li a {
+  display: block;
+  padding:15px 30px;
+  font-size:14px;
+  color: #121828;
+  transition: all 0.5s;
+}
+ .menu li a:hover {
+  color: #ffffff;
+  background-color: #ff533c;
+ }
+ 
+.main_p{
+width:70%;
+margin:0 auto;
+}
+}
+
+/*GIFアニメ*/
+#loading {
+ width: 100%;
+ height: 100%;
+ max-height: 1080px;
+ position: relative;
+}
+ 
+#loading img {
+ display: block;
+ margin:0 auto;
+ width:55%;
+}
+
+@media(max-width:670px){
+ #loading img{ 
+  position:absolute;
+  top:10%;
+  width:100%;
+  }
+}
+
+
+/*アニメ終了後*/ 
+.mainSite {
+ width: 100%;
+ height: 100%;
+ position: relative;
+}
+ 
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url(img/back-image.jpg);
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+@media(max-width:670px){
+.top-wrapper {
+background-image: url(img/back-imagephone.jpg);
+ }
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.container{
+ padding-bottom:100px;
+
+}
+
+/*content共通*/
+
+.content{
+  padding-top:70px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+.content h2 {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+
+.content-p{
+margin-top:-40px;
+padding-bottom:20px;
+}
+
+/*adout*/
+.content .ab_text{
+  width:50%;
+  margin:0 auto;
+  text-align: left;
+  line-height:35px;
+  letter-spacing: 1px;
+}
+
+@media(max-width:670px){
+ .content .ab_text{
+  width:80%;
+ }
+}
+
+/*work*/
+.works{
+background-color:#aa957a;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 60px 0px;
+  text-align: center;
+}
+.li1 {
+  overflow: hidden;
+  margin: 10px 8px 10px 16px;
+  position: relative;
+}
+
+.li1 img{
+  width:100%;
+}
+
+
+.li1 .caption {
+	font-size: 130%;
+	text-align: center;
+	color: #fff;
+}
+.li1 .mask {
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			-7px;
+	left:			0;
+	opacity:		0;	/* マスクを表示しない */
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.6s ease;
+	transition:		all 0.6s ease;
+}
+.li1:hover .mask {
+	opacity: 2;	/* マスクを表示する */
+	padding-top:110px;	/* ホバーで下にずらす */
+}
+
+.flex-list {
+  display: flex;
+  flex-wrap:wrap;
+}
+.flex-list li {
+  flex: auto;
+  width:30%;
+}
+
+.work_text{
+width:80%;
+margin:0 auto;
+letter-spacing: 1px;
+text-size:10px;
+padding-top:30px;
+padding-bottom:100px;
+}
+
+
+/* タブレット向けレイアウト */
+@media (max-width: 1000px) {
+  .flex-list {
+    flex-wrap: wrap;
+  }
+  .flex-list li {
+    width: 50%;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media (max-width:670px) {
+ .flex-list{
+    flex-wrap: wrap;
+  }
+  
+ .flex-list li{
+   width: 100%;
+ }
+
+}
+/*footer*/
+footer {
+  padding-top: 30px;
+}
+
+footer a{
+  padding: 0 20px;
+  color: gray;
+  padding-bottom:80px;
+}
+footer a:hover {
+  color: #ff533c;
+}
+.copy{
+  font-size:12px;
+  padding-top:80px;
+  padding-bottom:20px;
+  color: gray;
+  text-align:center;
+}

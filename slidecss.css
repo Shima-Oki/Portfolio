@@ -1,0 +1,57 @@
+.slider{
+    margin: 100px auto;
+    width: 80%;
+}
+.slider img{
+    height: auto;
+    width: 100%;
+}
+
+
+.prev:hover,.next:hover{
+color:#ff533c;
+}
+
+
+.prev,.next{
+color:gray;
+}
+.prev {
+   position: absolute;
+   left:10px;
+   top:50%;
+   margin-top:-25px;
+   z-index:200;
+}
+
+.next {
+    position: absolute;
+    right:10px;
+    top:50%;
+    margin-top:-25px;
+}
+
+
+/*topボタン*/
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+
+}
+#page_top a{
+  position: relative;
+  display: block;
+  color:gray;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a:hover {
+  color: #ff533c;
+}
+
+/*ローディング*/
