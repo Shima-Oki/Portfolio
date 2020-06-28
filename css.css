@@ -87,7 +87,7 @@ padding-top:20px;
    display:none;
 }
 #m_b{
-  padding: ５px;
+  padding: 10px;
   border-style: none;
   background-color:#ffffff;
   position:absolute;
@@ -154,7 +154,7 @@ margin:0 auto;
 }
  
 .top-wrapper {
-  padding: 180px 0 100px 0;
+  padding: 180px 20px 100px 20px;
   background-image: url(img/back-image.jpg);
   background-size: cover;
   color: white;
